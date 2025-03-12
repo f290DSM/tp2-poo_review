@@ -1,14 +1,14 @@
 import java.util.List;
 
-import domain.Blaziken;
-import domain.Charmander;
-import domain.EletricType;
-import domain.FireType;
-import domain.FlyingType;
-import domain.Pikachu;
-import domain.Pokemon;
-import domain.Squartle;
-import domain.Zapdos;
+import domain.pokemon.Blaziken;
+import domain.pokemon.Charmander;
+import domain.pokemon.EletricType;
+import domain.pokemon.FireType;
+import domain.pokemon.FlyingType;
+import domain.pokemon.Pikachu;
+import domain.pokemon.Pokemon;
+import domain.pokemon.Squartle;
+import domain.pokemon.Zapdos;
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -34,19 +34,12 @@ public class App {
             blaziken, zapdos);
 
         for (Pokemon pokemon : pokemons) {
-            System.out.println();
-            System.out.println(pokemon.getClass().getSimpleName());
-            System.out.println();
-            if (pokemon instanceof FireType) {
-                pokemon.attack();
-            }
-            
-            // System.out.println(String.format(template, 
-            // pokemon instanceof Pokemon, 
-            // pokemon instanceof FireType,
-            // pokemon instanceof EletricType, 
-            // pokemon instanceof FlyingType, 
-            // pokemon.getClass().getSimpleName()));
+            System.out.println(String.format(template, 
+            pokemon instanceof Pokemon, 
+            pokemon instanceof FireType,
+            pokemon instanceof EletricType, 
+            pokemon instanceof FlyingType, 
+            pokemon.getClass().getSimpleName()));
         }
 
     }
